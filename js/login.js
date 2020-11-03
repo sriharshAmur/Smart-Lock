@@ -49,7 +49,7 @@ function handleData(data) {
         window.localStorage.setItem("username",username);
         window.localStorage.setItem("password",password);
         window.localStorage.setItem("loggedin",true);
-        window.location.replace("http://localhost:8080/homepage.html");
+        window.location.replace("/index.html");
     } else{
         let alert = document.getElementById('alert');
         let html = `<div class="error-alert">
