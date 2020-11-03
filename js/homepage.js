@@ -1,5 +1,6 @@
-import { TaskGenerator } from './taskgenerator.js';
+import { TaskGenerator} from './taskgenerator.js';
 import { username as loginUsername, password as loginPassword } from './checklogin.js';
+import { ipaddress } from './main.js';
 var tg = new TaskGenerator();
 
 console.log(loginUsername);
@@ -12,7 +13,7 @@ document.querySelector(".refresh-btn").addEventListener("click", event => {
 
 
 function refresh() {
-    // console.log("refresh");
+    console.log("refresh");
     let tasks = tg.getStatus();
 
     let request = {
@@ -24,7 +25,7 @@ function refresh() {
     let json = JSON.stringify(request)
 
 
-    fetch('https://localhost/api/' + json)
+    fetch( ipaddress + json)
         .then(function (response) {
             // console.log(response);
             return response.json();
@@ -36,7 +37,7 @@ function refresh() {
 }
 //data: {lock: "locked", buzzer: "started", sensor: null}
 function update(data) {
-
+    console.log("ENtered update");
     if (data.successful) {
         if (data.data.lock === 'locked') {
             let lockStatus = document.querySelector(".status");
@@ -69,7 +70,7 @@ document.querySelector(".change-border").addEventListener("click", event => {
     let json = JSON.stringify(request)
 
 
-    fetch('https://localhost/api/' + json)
+    fetch(ipaddress + json)
         .then(function (response) {
             // console.log(response);
             return response.json();

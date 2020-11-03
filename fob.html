@@ -15,27 +15,41 @@
             <h1>Smart Lock</h1>
         </div>
         <div class="pages">
-            <div class="page"> <a href="fobs.html"> <img src="images/fobs.svg" alt="">
+            <div class="page"> <a href="users.html"> <img src="images/userw.svg" alt="">
                     <!-- <h4>Fobs</h4> -->
                 </a> </div>
             <div class="page"> <a href="index.html"><img src="images/lock.svg" alt="Lock"></a> </div>
-            <div class="page"> <a href="qrcode.html"> <img src="images/qr-code.svg" alt="">
+            <div class="page"> <a href="qrcodes.html"> <img src="images/qr-code.svg" alt="">
                     <!-- <h4>QR Code</h4> -->
                 </a> </div>
         </div>
 
        <div class="title container">
-           <h1 id="title">Fob 1</h1>
+           <h1 id="fob-title">Fob 1</h1>
        </div>
 
-       <div class="change box">
-           <a href="fobchange.html"><h2 class="box-h2">Change Passcode</h2></a>
-       </div>
+
+       <div class="change box ">
+        <h2 id="change" class="box-h2">Change Passcode</h2>
+    </div>
 
        <div class="deauth box">
            <a href="#"><h2 class="box-h2">De-Authorize</h2></a>
        </div>
 
+       <div class="remove-div box ">
+        <h2 id="remove" class="box-h2">Remove User</h2>
     </div>
+
+    </div>
+    <div class="loader-wrapper">
+        <span><img src="images/smart-lock.svg" alt=""> </span>
+        <h1 class="loading">Loading...</h1>
+        <div class="loader">
+            <span class="loader-inner"></span>
+        </div>
+    </div>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/fob.js"></script>
 </body>
 </html>

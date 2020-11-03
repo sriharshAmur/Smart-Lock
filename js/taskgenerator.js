@@ -1,3 +1,5 @@
+
+
 export class TaskGenerator{
     constructor(){
         this.grantaccess = {function: "door", type: "lock", input: {data: "temporary"}, log: true};

@@ -1,5 +1,6 @@
 import { TaskGenerator } from './taskgenerator.js';
 import { username as loginUsername, password as loginPassword } from './checklogin.js';
+import { ipaddress } from './main.js';
 var tg = new TaskGenerator();
 
 let qrcode = window.localStorage.getItem("qrcode");
@@ -7,6 +8,58 @@ let qrnumber = window.localStorage.getItem("qrnumber");
 
 document.getElementById('user-title').innerHTML = qrnumber;
 document.getElementById('user-title').title = qrcode;
+
+var qrcoviewde = new QRCode(document.getElementById("qrcode"), {
+    text: qrcode,
+    width: 500,
+    height: 500,
+    colorDark : "#000000",
+    colorLight : "#ffffff",
+    correctLevel : QRCode.CorrectLevel.H
+    });
+
+let tasks = tg.getTempQR(qrcode);
+
+    let request = {
+        user: loginUsername,
+        credential: loginPassword,
+        task: tasks
+    };
+    let json = JSON.stringify(request)
+
+fetch(ipaddress + json)
+    .then(function (response) {
+        // console.log(response);
+        return response.json();
+    })
+    .then(function (data) {
+        update(data);
+    })
+
+function update(data){
+    console.log(data);
+    if(data.valid){
+        document.querySelector("#validh2").innerHTML = "Valid"
+    }
+    else{
+        document.querySelector("#validh2").innerHTML = "Invalid"
+    }
+
+    document.querySelector("#code").value = qrcode;
+}
+
+document.querySelector("#copy").addEventListener("click", function () {
+    var copyText = document.getElementById("code");
+
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+    document.execCommand("copy");
+    this.innerHTML = "Copied !!!";
+
+})
+
+
 
 // let tasks = tg.getTempQRs();
 
@@ -22,7 +75,7 @@ document.getElementById('remove').addEventListener("click", event => {
 
     let json = JSON.stringify(request)
 
-    fetch('https://localhost/api/' + json)
+    fetch(ipaddress + json)
         .then(function (response) {
             console.log(response);
             return response.json();

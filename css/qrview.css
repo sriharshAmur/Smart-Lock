@@ -1,0 +1,35 @@
+
+.qr-code {
+    margin: 0 auto;
+    /* border: 4px solid red; */
+    display: flex;
+    justify-content: center;
+
+}
+
+.qr-code img{
+    width: 200px;
+    height: 200px;
+}
+
+.code h2{
+    margin-right: 10px;
+}
+
+.code input {
+    padding: 5px;
+
+}
+
+.code button{
+    /* margin: 10px auto; */
+    padding: 5px;
+    text-align: center;
+    margin-left: 10px;
+    /* width: 70%; */
+    font-size: 1.2rem;
+    background-color: var(--dark-blue-dark);
+    color: var(--font);
+    font-weight: 800;
+    border: 3px var(--cyan) solid;
+}

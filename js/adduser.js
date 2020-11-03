@@ -1,5 +1,6 @@
 import { TaskGenerator } from './taskgenerator.js';
 import { username as loginUsername, password as loginPassword } from './checklogin.js';
+import { ipaddress } from './main.js';
 var tg = new TaskGenerator();
 
 console.log(loginUsername);
@@ -11,11 +12,12 @@ form.addEventListener('submit', e => {
     let password = document.getElementById('password').value;
     let name = document.getElementById('name').value;
     let pin = document.getElementById('pin').value;
-    setUser(username, password, name, pin);
+    let card = document.getElementById('card').value;
+    setUser(username, password, name, pin, card);
 })
 
 
-function setUser(username, password, name, pin) {
+function setUser(username, password, name, pin, card) {
     let list = {
         user: username,
         credential: password
@@ -23,6 +25,7 @@ function setUser(username, password, name, pin) {
 
     if (name != "") list["name"] = name;
     if (pin != "") list["pin"] = pin;
+    if (card != "") list["card"] = card;
 
     let tasks = tg.addUser(list);
 
@@ -34,7 +37,7 @@ function setUser(username, password, name, pin) {
 
     let json = JSON.stringify(request)
 
-    fetch('https://localhost/api/' + json)
+    fetch(ipaddress + json)
         .then(function (response) {
             console.log(response);
             return response.json();

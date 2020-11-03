@@ -2,6 +2,7 @@
 // export const password = 'moeilijk@1234';
 
 import { TaskGenerator } from './taskgenerator.js';
+import { ipaddress } from './main.js';
 var tg = new TaskGenerator();
 let username;
 let password;
@@ -31,7 +32,7 @@ function authorize(username, password) {
     let json = JSON.stringify(request)
 
 
-    fetch('https://localhost/api/' + json)
+    fetch(ipaddress + json)
         .then(function (response) {
             return response.json();
         })

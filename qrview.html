@@ -5,28 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/qrview.css">
     <title>QR Code</title>
 </head>
 
 <body>
     <script type="module" src="js/checklogin.js"></script>
+    <script src="js/qrcodeMaker.js"></script>
     <div class="flex-body">
         <div class="logo container">
             <img src="images/smart-lock.svg" alt="">
             <h1>Smart Lock</h1>
         </div>
         <div class="pages">
-            <div class="page"> <a href="fobs.html"> <img src="images/fobs.svg" alt="">
+            <div class="page"> <a href="users.html"> <img src="images/userw.svg" alt="">
                     <!-- <h4>Fobs</h4> -->
                 </a> </div>
             <div class="page"> <a href="index.html"><img src="images/lock.svg" alt="Lock"></a> </div>
-            <div class="page"> <a href="qrcode.html"> <img src="images/qr-code.svg" alt="">
+            <div class="page"> <a href="qrcodes.html"> <img src="images/qr-code.svg" alt="">
                     <!-- <h4>QR Code</h4> -->
                 </a> </div>
         </div>
 
         <div class="title container">
             <h2 id="user-title">QR Code</h2>
+        </div>
+
+        <div class="qr-code container">
+            <div id="qrcode">
+                <!-- <script>new QRCode(document.getElementById('qrcode'), '7z7gpONmcLW92YAfUmjtFTwSjEUU5UMEGExoiLS9kv3GvFmkLKT64lYj9HH0Dc6VWEbdDC9QURUuY6P5SKDQG7Bu0OMkJmY2WaHlW7bxW4EQVYVGoekHtQKM7ziBGMDY');</script> -->
+            </div>
+        </div>
+
+        <div class="valid box container">
+            <h2>Card is : <span id="validh2"></span></h2>
+        </div>
+
+        <div class="code container box">
+            <!-- <h2>Code</h2> -->
+            <input type="text" id="code">
+            <button id="copy">Copy Code</button>
         </div>
 
         <!-- <div class="edit">
@@ -43,7 +61,14 @@
 
         
     </div>
-
+    <div class="loader-wrapper">
+        <span><img src="images/smart-lock.svg" alt=""> </span>
+        <h1 class="loading">Loading...</h1>
+        <div class="loader">
+            <span class="loader-inner"></span>
+        </div>
+    </div>
+    <script type="module" src="js/main.js"></script>
     <script type="module" src="js/qrview.js"></script>
 </body>
 

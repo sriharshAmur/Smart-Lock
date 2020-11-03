@@ -1,6 +1,7 @@
 import { TaskGenerator } from './taskgenerator.js';
 import { username as loginUsername, password as loginPassword } from './checklogin.js';
-console.log("Entered User.js");
+import { ipaddress } from './main.js';
+// console.log("Entered User.js");
 var tg = new TaskGenerator();
 let tasks = tg.getUsers();
 
@@ -13,7 +14,7 @@ let request = {
 let json = JSON.stringify(request)
 
 
-fetch('https://localhost/api/' + json)
+fetch(ipaddress + json)
     .then(function (response) {
         // console.log(response);
         return response.json();

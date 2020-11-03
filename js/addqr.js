@@ -1,5 +1,6 @@
 import { TaskGenerator } from './taskgenerator.js';
 import { username as loginUsername, password as loginPassword } from './checklogin.js';
+import { ipaddress } from './main.js';
 var tg = new TaskGenerator();
 
 let form = document.querySelector('form');
@@ -35,7 +36,7 @@ function addQR(uses, date, qrpin) {
 
     let json = JSON.stringify(request)
 
-    fetch('https://localhost/api/' + json)
+    fetch(ipaddress + json)
         .then(function (response) {
             console.log(response);
             return response.json();

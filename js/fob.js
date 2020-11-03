@@ -3,9 +3,9 @@ import { username as loginUsername, password as loginPassword } from './checklog
 import { ipaddress } from './main.js';
 var tg = new TaskGenerator();
 
-let userview = window.localStorage.getItem("userview");
+let userview = window.localStorage.getItem("fobview");
 
-document.getElementById('user-title').innerHTML = userview;
+document.getElementById('fob-title').innerHTML = userview;
 
 
 document.getElementById('remove').addEventListener("click", event => {
