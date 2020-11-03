@@ -38,7 +38,8 @@ fetch(ipaddress + json)
 
 function update(data){
     console.log(data);
-    if(data.valid){
+    console.log(data.data.valid);
+    if(data.data.valid){
         document.querySelector("#validh2").innerHTML = "Valid"
     }
     else{

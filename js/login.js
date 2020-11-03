@@ -21,6 +21,9 @@ form.addEventListener('submit', e => {
 })
 
 function authorize(username, password) {
+
+    
+
     let tasks = tg.getStatus();
 
     let request = {

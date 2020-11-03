@@ -19,7 +19,7 @@ function addQR(uses, date, qrpin) {
     let list = {
         uses: uses,
         valid: true,
-        pin: qrcode,
+        pin: qrpin,
         mode: "uses",
         user: loginUsername
     };
