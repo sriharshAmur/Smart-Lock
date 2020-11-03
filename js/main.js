@@ -1,5 +1,7 @@
-export const ipaddress = 'https://localhost/api/';
-// console.log("Main");
+let addr = "192.168.137.183";
+export const ipaddress = "https://" + addr + '/api/';
+
+console.log(ipaddress);
 
 
 
