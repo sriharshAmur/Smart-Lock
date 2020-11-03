@@ -10,7 +10,8 @@ document.querySelector(".refresh-btn").addEventListener("click", event => {
     refresh();
 });
 
-function refresh(){
+
+function refresh() {
     // console.log("refresh");
     let tasks = tg.getStatus();
 
@@ -33,10 +34,26 @@ function refresh(){
         })
 
 }
-
+//data: {lock: "locked", buzzer: "started", sensor: null}
 function update(data) {
-    console.log("update");
-    console.log(data);
+
+    if (data.successful) {
+        if (data.data.lock === 'locked') {
+            let lockStatus = document.querySelector(".status");
+            lockStatus.innerHTML = "Locked"
+
+            let tochange = document.querySelector(".status-tochange");
+            tochange.innerHTML = "Unlock"
+        }
+        else {
+            let lockStatus = document.querySelector(".status");
+            lockStatus.innerHTML = "Unlocked."
+
+            let tochange = document.querySelector(".status-tochange");
+            tochange.innerHTML = "Unlocked"
+        }
+    }
+
 }
 
 
@@ -60,7 +77,7 @@ document.querySelector(".change-border").addEventListener("click", event => {
         .then(function (data) {
             unlocked(data);
         })
-    })
+})
 
 
 function unlocked(data) {

@@ -1,5 +1,5 @@
 import { TaskGenerator } from './taskgenerator.js';
-import { username as loginUsername, password as loginPassword } from './login.js';
+import { username as loginUsername, password as loginPassword } from './checklogin.js';
 var tg = new TaskGenerator();
 
 let userview = window.localStorage.getItem("userview");
