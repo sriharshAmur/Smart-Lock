@@ -9,14 +9,16 @@ form.addEventListener('submit', e => {
     // console.log(e);
     let uses = parseInt(document.getElementById('uses').value);
     let date = document.getElementById('date').value;
-    addQR(uses, date);
+    let qrpin = document.getElementById('qrpin').value;
+    addQR(uses, date, qrpin);
 })
 
 
-function addQR(uses, date) {
+function addQR(uses, date, qrpin) {
     let list = {
         uses: uses,
         valid: true,
+        pin: qrcode,
         mode: "uses",
         user: loginUsername
     };

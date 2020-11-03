@@ -5,7 +5,7 @@ var tg = new TaskGenerator();
 console.log(loginUsername);
 console.log(loginPassword);
 
-// refresh();
+refresh();
 document.querySelector(".refresh-btn").addEventListener("click", event => {
     refresh();
 });
@@ -35,8 +35,8 @@ function refresh(){
 }
 
 function update(data) {
-    // console.log("update");
-    // console.log(data);
+    console.log("update");
+    console.log(data);
 }
 
 
