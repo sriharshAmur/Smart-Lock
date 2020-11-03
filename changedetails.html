@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/changedetails.css">
+    <title>Change Username and Password</title>
+</head>
+
+<body>
+    <div class="flex-body">
+        <div class="logo container">
+            <img src="images/smart-lock.svg" alt="">
+            <h1>Smart Lock</h1>
+        </div>
+        <div class="pages">
+            <div class="page"> <a href="fobs.html"> <img src="images/fobs.svg" alt="">
+                    <!-- <h4>Fobs</h4> -->
+                </a> </div>
+            <div class="page"> <a href="homepage.html"><img src="images/lock.svg" alt="Lock"></a> </div>
+            <div class="page"> <a href="qrcode.html"> <img src="images/qr-code.svg" alt="">
+                    <!-- <h4>QR Code</h4> -->
+                </a> </div>
+        </div>
+
+        <div class="title">
+            <h2>Change Username and/or Password</h2>
+        </div>
+
+        <div class="form-outter container">
+            <form action="#">
+                <div class="form-block">
+                    <h2>New Username</h2>
+                    <input type="text" id="username" >
+                </div>
+                <div class="form-block">
+                    <h2>New Password</h2>
+                    <input type="password" id="password">
+                </div>
+                <div class="form-block">
+                    <h2>New Name</h2>
+                    <input type="text" id="name">
+                </div>
+                <div class="form-block">
+                    <h2>New Pin</h2>
+                    <input type="number" id="pin">
+                </div>
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="alert">
+
+    </div>
+
+    <script type="module" src="js/changedetails.js"></script>
+</body>
+
+</html>

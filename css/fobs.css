@@ -1,0 +1,26 @@
+.register{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.fob-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.fob {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px 20px;
+}
+
+.add-fobs{
+    
+}
+
+.add-fobs h2{
+    padding: 10px 30px;
+    margin: 0 auto;
+    border: 1px solid black;
+    width: fit-content;
+}

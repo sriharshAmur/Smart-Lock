@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <title>Smart Lock</title>
+</head>
+
+<body>
+    <script type="module" src="js/checklogin.js"></script>
+    <div class="flex-body">
+        <div class="logo container">
+            <img src="images/smart-lock.svg" alt="">
+            <h1>Smart Lock</h1>
+        </div>
+        <div class="pages">
+            <div class="page"> <a href="fobs.html"> <img src="images/fobs.svg" alt="">
+                    <!-- <h4>Fobs</h4> -->
+                </a> </div>
+            <div class="page"> <a href="homepage.html"><img src="images/lock.svg" alt="Lock"></a> </div>
+            <div class="page"> <a href="qrcode.html"> <img src="images/qr-code.svg" alt="">
+                    <!-- <h4>QR Code</h4> -->
+                </a> </div>
+        </div>
+        <div class="lock-status container">
+            <h2>Lock Status : </h2>
+            <h2 class="status">Locked.</h2>
+        </div>
+        <div class="change-status container box">
+            <div class="change-border">
+                <img src="images/unlock.svg" alt="change">
+                <h2 class="status-tochange ">Unlock</h2>
+            </div>
+        </div>
+        <div class="settings container box">
+            <a href="settings.html">
+                <div class="settings-div">
+                    <img src="images/settings.svg" alt="Settings Icon"> 
+                    <h2>Settings</h2>
+                </div>
+            </a>
+        </div>
+
+        <div class="refresh container box">
+            <h2 class="refresh-btn">Refresh</h2>
+        </div>
+
+        <div class="warning container">
+            <h3>Unlocking the Door will open the door for 30 seconds.</h3>
+        </div>
+
+        
+    </div>
+
+
+    <script type="module" src="./js/homepage.js"></script>
+</body>
+
+</html>

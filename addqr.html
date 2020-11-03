@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Add QR Code</title>
+</head>
+
+<body>
+    <div class="flex-body">
+        <div class="logo container">
+            <img src="images/smart-lock.svg" alt="">
+            <h1>Smart Lock</h1>
+        </div>
+        <div class="pages">
+            <div class="page"> <a href="fobs.html"> <img src="images/fobs.svg" alt="">
+                    <!-- <h4>Fobs</h4> -->
+                </a> </div>
+            <div class="page"> <a href="homepage.html"><img src="images/lock.svg" alt="Lock"></a> </div>
+            <div class="page"> <a href="qrcode.html"> <img src="images/qr-code.svg" alt="">
+                    <!-- <h4>QR Code</h4> -->
+                </a> </div>
+        </div>
+
+        <div class="title container">
+            <h2>Add QR Code</h2>
+        </div>
+
+        <div class="form-outter container">
+            <form action="#">
+                <div class="form-block">
+                    <h2>Number of Uses</h2>
+                    <input type="number" id="uses" required>
+                </div>
+                <div class="form-block">
+                    <h2>Valid Untill</h2>
+                    <input type="datetime" id="date">
+                </div>
+                
+                <button>Submit</button>
+            </form>
+        </div>
+
+        <div id="alert" class= "container">
+
+        </div>
+
+
+    </div>
+
+    <script type="module" src="js/addqr.js"></script>
+</body>
+
+</html>
