@@ -1,4 +1,4 @@
-let addr = "192.168.137.183";
+let addr = "192.168.137.45";
 export const ipaddress = "https://" + addr + '/api/';
 
 console.log(ipaddress);
